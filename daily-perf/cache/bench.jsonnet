@@ -136,7 +136,7 @@ function(duration='300', threads='4', poolsize='43', concurrency='20', nkeys='10
                  },
                  steps: [
                      // Wait for the test to finish
-                     systemslab.barrier('test-finish'),
+                     systemslab.barrier('test-finish', timeout = 3600 * 12),
                  ],
             },
             # storage: {
