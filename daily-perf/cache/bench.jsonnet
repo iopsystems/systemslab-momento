@@ -75,10 +75,10 @@ function(duration='300', threads='4', poolsize='43', concurrency='20', nkeys='10
             ],
         },
         ratelimit_config = {
-            start: 5000,
+            start: 20000,
             end: 65000,
-            step: 2500,
-            interval: 240,
+            step: 5000,
+            interval: 150,
         },
         loadgen_config = client_config {
             general+: {
