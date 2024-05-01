@@ -109,9 +109,6 @@ function(duration='300', threads='4', poolsize='43', concurrency='20', nkeys='10
                     // Write out the toml config
                     systemslab.write_file('loadgen.toml', loadgen),
 
-                    // Wait for the backend and frontend dummy jobs to start
-                    systemslab.barrier('test-start'),
-
                     // Now run the real benchmark
                     systemslab.bash(|||
                         set -a && source /etc/environment && set +a
